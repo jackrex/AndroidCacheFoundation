@@ -1,0 +1,5 @@
+<!-- From: file:/Volumes/MAC/Users/Jackrex/GitHub/GitHubAndroid/AndroidCacheFoundation/UiLibs/Android-ViewPagerIndicator/AndroidManifest.xml -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="65" android:versionName="2.4.1" package="com.viewpagerindicator">
+
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="18"/>
+</manifest>

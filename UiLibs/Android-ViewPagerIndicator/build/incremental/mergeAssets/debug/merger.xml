@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/Volumes/MAC/Users/Jackrex/GitHub/GitHubAndroid/AndroidCacheFoundation/UiLibs/Android-ViewPagerIndicator/src/main/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Volumes/MAC/Users/Jackrex/GitHub/GitHubAndroid/AndroidCacheFoundation/UiLibs/Android-ViewPagerIndicator/src/debug/assets" />
+    </dataSet>
+
+</merger>
