@@ -22,4 +22,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:+'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':CacheFoundation')
+    compile project(':application')
+    compile project(':UiLibs:XListView')
 }

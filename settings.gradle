@@ -1,1 +1,3 @@
 include ':app', ':CacheFoundation', ':application'
+include ':UiLibs:Android-ViewPagerIndicator'
+include ':UiLibs:XListView'
