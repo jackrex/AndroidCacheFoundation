@@ -1,1 +1,1 @@
-include ':app', ':CacheFoundation'
+include ':app', ':CacheFoundation', ':application'
