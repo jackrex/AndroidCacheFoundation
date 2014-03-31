@@ -24,4 +24,5 @@ dependencies {
     compile project(':CacheFoundation')
     compile project(':application')
     compile project(':UiLibs:XListView')
+    compile project(':framework')
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#e8e8e8"
+    android:layout_height="match_parent">
+
+    <cn.cafecar.android.xlistview.XListView
+        android:id="@+id/mylistview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:descendantFocusability="afterDescendants"
+        android:divider="@null"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:fadingEdge="none"
+        android:dividerHeight="0dp"
+        >
+    </cn.cafecar.android.xlistview.XListView>
+
+
+</LinearLayout>

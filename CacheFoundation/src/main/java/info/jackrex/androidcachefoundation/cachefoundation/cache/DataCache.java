@@ -99,14 +99,13 @@ public class DataCache {
             contentValues.put(DATA, jsontext);
             contentValues.put(TIMESTAMP, date);
 
-            database.beginTransaction();
-            long id = database.insertWithOnConflict(TABLE, DATA, contentValues, SQLiteDatabase.CONFLICT_REPLACE);
-            Log.e("id is a ", id + ""); //-1 represent error
+            long id=  database.insertWithOnConflict(TABLE,DATA,contentValues,SQLiteDatabase.CONFLICT_REPLACE);
+            Log.e("id is a ",id+"");
 
         } catch (Exception e) {
 
         } finally {
-            database.endTransaction();
+
         }
 
 
