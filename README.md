@@ -20,3 +20,15 @@ this help you easy and quick to build a app.
 ### The DEMO
 
 Demo provide Tab + ViewPager Style.
+
+
+
+###Pics
+
+Pic1
+![Alt text](1.png "Optional title")
+
+- - - 
+
+Pic2
+![Alt text](2.png "Optional title")

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="#fff"
+    android:padding="0dp"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+    <RelativeLayout
+
+        android:id="@+id/left"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="0dp"
+        android:layout_toLeftOf="@+id/iv_pic"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="14dp" >
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#4D4D52"
+                android:text="是实际付款了就是雷锋精神了房价是否接受了房间了顺丰快速减肥了快速减肥了双方将老师dfsdfsd"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" >
+
+            <ImageView
+                android:id="@+id/iv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="0dp"
+                android:src="@drawable/icon_time2x"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/iv_time"
+                android:text="6分钟前"
+                android:layout_alignTop="@+id/iv_time"
+                android:padding="0dp"
+                android:textColor="#A3ACBA"
+                android:textSize="14.66667sp" />
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="24评论"
+                android:padding="0dp"
+                android:textColor="#A3ACBA"
+                android:textSize="14.66667sp" />
+
+            <ImageView
+                android:id="@+id/iv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:paddingTop="3dp"
+                android:visibility="gone"
+                android:layout_toLeftOf="@+id/tv_comment"
+                android:src="@drawable/icon_talk2x" />
+        </RelativeLayout>
+
+
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+
+            <View
+                android:layout_below="@+id/bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5px"
+                android:layout_marginLeft="12dp"
+                android:padding="1dp"
+                android:background="@color/gray" >
+            </View>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="73dp"
+        android:layout_height="54dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:scaleType="fitXY"
+        android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
