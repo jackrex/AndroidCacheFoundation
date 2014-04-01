@@ -9,7 +9,7 @@
  * @author Maxwin
  * @description XListView's footer
  */
-package cn.cafecar.android.xlistview;
+package info.jackrex.xlistview;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -17,6 +17,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import cn.cafecar.android.xlistview.R;
 
 
 public class XListViewFooter extends LinearLayout {

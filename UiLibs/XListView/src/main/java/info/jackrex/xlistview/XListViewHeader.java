@@ -9,7 +9,7 @@
  * @author Maxwin
  * @description XListView's header
  */
-package cn.cafecar.android.xlistview;
+package info.jackrex.xlistview;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -22,6 +22,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import cn.cafecar.android.xlistview.R;
 
 
 public class XListViewHeader extends LinearLayout {

@@ -12,7 +12,8 @@ import com.android.volley.VolleyError;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.cafecar.android.xlistview.XListView;
+import info.jackrex.androidcachefoundation.app.view.HeaderView;
+import info.jackrex.xlistview.XListView;
 import info.jackrex.androidcachefoundation.app.adapter.CarNewsAdapter;
 import info.jackrex.androidcachefoundation.app.entity.News;
 import info.jackrex.androidcachefoundation.app.entity.NewsContent;
@@ -34,6 +35,14 @@ public class Fragment1 extends BaseFragment implements XListView.IXListViewListe
     private boolean hasNext;
     private boolean isLoadMore;
     private int nextPage;
+
+    private HeaderView headerView;
+
+
+    //here use roboguice
+
+
+
     Handler handler = new Handler() {
 
         @Override
@@ -109,6 +118,7 @@ public class Fragment1 extends BaseFragment implements XListView.IXListViewListe
 
         this.setRetainInstance(true);
         xListView = (XListView) currentView.findViewById(R.id.mylistview);
+        headerView = (HeaderView) currentView.findViewById(R.id.headerviw);
         dialog = new ProgressDialog(getActivity());
         loadData(handler, 1);
 
