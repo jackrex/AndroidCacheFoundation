@@ -12,13 +12,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import roboguice.fragment.RoboFragment;
+
 /**
  * Created by Jackrex on 2/25/14.
  * 在使用Fragment 时候一定要记住 Fragment 的生命周期是委托在Activity 上
  * 使用getActivity() 要判断null
  *
  */
-public abstract  class BaseFragment extends android.support.v4.app.Fragment {
+public abstract  class BaseFragment extends RoboFragment {
 
     public static final String TAG = BaseFragment.class.getName();
     public ProgressDialog progressDialog;
@@ -28,6 +30,8 @@ public abstract  class BaseFragment extends android.support.v4.app.Fragment {
     protected ViewGroup container;
 
     private static final String BUNDLE = "bundle";
+
+
 
     public void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

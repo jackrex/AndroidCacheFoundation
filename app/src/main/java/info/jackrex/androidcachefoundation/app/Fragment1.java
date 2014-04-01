@@ -12,18 +12,22 @@ import com.android.volley.VolleyError;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.cafecar.android.xlistview.XListView;
+import info.jackrex.androidcachefoundation.app.popwindow.AddPopWindow;
+import info.jackrex.androidcachefoundation.app.popwindow.SettingsPopWindow;
+import info.jackrex.androidcachefoundation.app.view.HeaderView;
+import info.jackrex.xlistview.XListView;
 import info.jackrex.androidcachefoundation.app.adapter.CarNewsAdapter;
 import info.jackrex.androidcachefoundation.app.entity.News;
 import info.jackrex.androidcachefoundation.app.entity.NewsContent;
 import info.jackrex.androidcachefoundation.app.entity.NewsEntity;
 import info.jackrex.androidcachefoundation.application.MyApplication;
 import info.jackrex.androidcachefoundation.framework.BaseFragment;
+import roboguice.inject.InjectView;
 
 /**
  * Created by Jackrex on 3/30/14.
  */
-public class Fragment1 extends BaseFragment implements XListView.IXListViewListener {
+public class Fragment1 extends BaseFragment implements XListView.IXListViewListener,View.OnClickListener {
 
     List<News> newses = new ArrayList<News>();
     List<News> newsesCopy = new ArrayList<News>();
@@ -34,6 +38,18 @@ public class Fragment1 extends BaseFragment implements XListView.IXListViewListe
     private boolean hasNext;
     private boolean isLoadMore;
     private int nextPage;
+
+    @InjectView (R.id.headerviw)
+    private HeaderView headerView;
+
+
+
+    private SettingsPopWindow settingsPopWindow;
+    private AddPopWindow addPopWindow;
+    //here use roboguice
+
+
+
     Handler handler = new Handler() {
 
         @Override
@@ -109,6 +125,8 @@ public class Fragment1 extends BaseFragment implements XListView.IXListViewListe
 
         this.setRetainInstance(true);
         xListView = (XListView) currentView.findViewById(R.id.mylistview);
+       //use roboguice
+      //  headerView = (HeaderView) currentView.findViewById(R.id.headerviw);
         dialog = new ProgressDialog(getActivity());
         loadData(handler, 1);
 
@@ -123,10 +141,36 @@ public class Fragment1 extends BaseFragment implements XListView.IXListViewListe
 
 
 
+
+
+
+            }
+        });
+
+
+        headerView.middleRe.setOnClickListener(this);
+        headerView.set.setOnClickListener(this);
+        headerView.add.setOnClickListener(this);
+
+        settingsPopWindow = new SettingsPopWindow(getActivity(),getActivity(),new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        addPopWindow = new AddPopWindow(getActivity(),new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
             }
         });
 
     }
+
+
 
 
     private void initListView(List<News> newsList) {
@@ -194,4 +238,35 @@ public class Fragment1 extends BaseFragment implements XListView.IXListViewListe
         }
 
     }
+
+
+
+    @Override
+    public void onClick(View v) {
+
+        if(v == headerView.add){
+            
+            addPopWindow.showAsDropDown(headerView.add);
+
+        }else if(v == headerView.set){
+
+            settingsPopWindow.showAsDropDown(headerView.set);
+
+
+        }else if (v == headerView.middleRe){
+
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
 }

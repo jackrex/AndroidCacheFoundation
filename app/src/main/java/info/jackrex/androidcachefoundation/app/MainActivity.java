@@ -3,7 +3,6 @@ package info.jackrex.androidcachefoundation.app;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -15,7 +14,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends FragmentActivity implements TabHost.OnTabChangeListener {
+import roboguice.activity.RoboFragmentActivity;
+
+public class MainActivity extends RoboFragmentActivity implements TabHost.OnTabChangeListener {
 
     private TabHost tabHost;
     private MyViewPager viewPager;

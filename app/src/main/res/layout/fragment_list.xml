@@ -3,9 +3,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:background="#e8e8e8"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
 
-    <cn.cafecar.android.xlistview.XListView
+    >
+
+    <info.jackrex.androidcachefoundation.app.view.HeaderView
+        android:id="@+id/headerviw"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp">
+
+        </info.jackrex.androidcachefoundation.app.view.HeaderView>
+    <info.jackrex.xlistview.XListView
         android:id="@+id/mylistview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -18,7 +26,7 @@
         android:fadingEdge="none"
         android:dividerHeight="0dp"
         >
-    </cn.cafecar.android.xlistview.XListView>
+    </info.jackrex.xlistview.XListView>
 
 
 </LinearLayout>
