@@ -12,7 +12,9 @@ import com.android.volley.VolleyError;
 import java.util.ArrayList;
 import java.util.List;
 
+import info.jackrex.androidcachefoundation.app.adapter.PopWindowAdapter;
 import info.jackrex.androidcachefoundation.app.popwindow.AddPopWindow;
+import info.jackrex.androidcachefoundation.app.popwindow.ListPopMenu;
 import info.jackrex.androidcachefoundation.app.popwindow.SettingsPopWindow;
 import info.jackrex.androidcachefoundation.app.view.HeaderView;
 import info.jackrex.xlistview.XListView;
@@ -39,6 +41,7 @@ public class Fragment1 extends BaseFragment implements XListView.IXListViewListe
     private boolean isLoadMore;
     private int nextPage;
 
+    //here use roboguice
     @InjectView (R.id.headerviw)
     private HeaderView headerView;
 
@@ -46,7 +49,11 @@ public class Fragment1 extends BaseFragment implements XListView.IXListViewListe
 
     private SettingsPopWindow settingsPopWindow;
     private AddPopWindow addPopWindow;
-    //here use roboguice
+
+
+    private ListPopMenu listPopMenu;
+    private PopWindowAdapter popWindowAdapter;
+
 
 
 
@@ -168,6 +175,15 @@ public class Fragment1 extends BaseFragment implements XListView.IXListViewListe
             }
         });
 
+        List<String> lists =  new ArrayList<String>();
+        lists.add("xxx");
+        popWindowAdapter = new PopWindowAdapter(getActivity(),lists);
+
+
+
+        listPopMenu = new ListPopMenu(getActivity(),popWindowAdapter,null,null);
+
+
     }
 
 
@@ -246,14 +262,18 @@ public class Fragment1 extends BaseFragment implements XListView.IXListViewListe
 
         if(v == headerView.add){
             
-            addPopWindow.showAsDropDown(headerView.add);
+            addPopWindow.showAsDropDown(headerView.setadd);
 
         }else if(v == headerView.set){
 
-            settingsPopWindow.showAsDropDown(headerView.set);
+            settingsPopWindow.showAsDropDown(headerView.setadd);
 
 
         }else if (v == headerView.middleRe){
+
+
+
+        listPopMenu.showAsDropDown(headerView);
 
 
         }

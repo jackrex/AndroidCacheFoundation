@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="188dp"
+              android:layout_height="70dp"
+              android:background="#000"
+              android:id="@+id/vAddCar">
+
+    <RelativeLayout   android:layout_width="188dp"
+              android:layout_height="70dp">
+              
+          <RelativeLayout android:layout_height="1px"
+        android:layout_width="fill_parent"
+        android:background="#000"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true">
+
+        </RelativeLayout>
+    
+        <ImageButton
+            android:id="@+id/btnAddCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26dp"
+            android:background="@drawable/ic_launcher"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@+id/btnAddCar"
+            android:text="XXXXX"
+              android:layout_centerVertical="true"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+        </RelativeLayout>
+</RelativeLayout>

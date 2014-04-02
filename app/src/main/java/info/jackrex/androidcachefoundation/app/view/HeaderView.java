@@ -5,6 +5,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import info.jackrex.androidcachefoundation.app.R;
@@ -18,6 +19,7 @@ public class HeaderView extends RelativeLayout {
     public ImageView add;
     public ImageView set;
     public View headerView;
+    public LinearLayout setadd;
 
 
 
@@ -43,6 +45,7 @@ public class HeaderView extends RelativeLayout {
         add = (ImageView) headerView.findViewById(R.id.add);
         set = (ImageView) headerView.findViewById(R.id.set);
         middleRe = (RelativeLayout) headerView.findViewById(R.id.middleRe);
+        setadd = (LinearLayout)headerView.findViewById(R.id.setadd);
 
 
 
