@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+   >
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="#000"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+      >
+        <!--#DBDFDF-->
+        <ListView android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/lvlistview"
+            android:divider="#fff"
+            android:cacheColorHint="#00000000"
+            android:dividerHeight="0px"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="none"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+</RelativeLayout>

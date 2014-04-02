@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="188dp"
+    android:layout_height="70dp"
+    android:background="#000" >
+
+    <RelativeLayout
+        android:id="@+id/vTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:background="#000" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="51dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="11dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="84dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+
+            <RelativeLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                >
+
+                <TextView
+                    android:id="@+id/tvCarBrand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="1231231"
+                    android:layout_centerVertical="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="9dp"
+                android:id="@+id/tvCarSeri"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="01100303"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_head"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="12dp"
+
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="3dp" >
+
+            <ImageView
+                android:id="@+id/ivCarImage"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/editcar_divider"
+        android:layout_height="1px"
+        android:layout_width="102dp"
+        android:background="#1173BB"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"></RelativeLayout>
+
+
+</RelativeLayout>
