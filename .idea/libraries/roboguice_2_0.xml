@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="roboguice-2.0">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/build/exploded-bundles/AndroidCacheFoundationFrameworkUnspecified.aar/libs/roboguice-2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/framework/libs/roboguice-2.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
