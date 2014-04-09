@@ -12,7 +12,7 @@ import com.android.volley.toolbox.Volley;
 public class HttpService {
     public static String TAG = HttpService.class.getName();
     public static String DEFAULT_HTTP_TAG = "DEFAULT HTTP REQUEST";
-    private RequestQueue httpQueue;
+    public static RequestQueue httpQueue;
     private static HttpService httpService;
 
     public  Context context;
