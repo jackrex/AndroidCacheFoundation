@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/UiLibs/Android-ViewPagerIndicator/Android-ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/UiLibs/Android-ViewPagerIndicator/Android-ViewPagerIndicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/AndroidCacheFoundation.iml" filepath="$PROJECT_DIR$/AndroidCacheFoundation.iml" />
       <module fileurl="file://$PROJECT_DIR$/CacheFoundation/CacheFoundation.iml" filepath="$PROJECT_DIR$/CacheFoundation/CacheFoundation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UiLibs/UiLibs.iml" filepath="$PROJECT_DIR$/UiLibs/UiLibs.iml" />
       <module fileurl="file://$PROJECT_DIR$/UiLibs/XListView/XListView.iml" filepath="$PROJECT_DIR$/UiLibs/XListView/XListView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/application/application.iml" filepath="$PROJECT_DIR$/application/application.iml" />
