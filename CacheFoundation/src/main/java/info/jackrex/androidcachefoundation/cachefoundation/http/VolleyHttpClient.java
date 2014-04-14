@@ -15,7 +15,6 @@ import com.google.gson.JsonSyntaxException;
 import java.util.HashMap;
 import java.util.Map;
 
-import info.jackrex.androidcachefoundation.cachefoundation.cache.DataCache;
 import info.jackrex.androidcachefoundation.cachefoundation.utils.NetWork.NetWorkUtils;
 
 
@@ -65,24 +64,37 @@ public class VolleyHttpClient {
 
         GsonRequest request = new GsonRequest(Request.Method.GET, getAbsoluteUrl(url), clazz, null , null, listener, errorListener);
 
+
+
+       HttpService.httpQueue.getCache().invalidate(getAbsoluteUrl(url), true);
         if(!NetWorkUtils.detect(httpService.getContext()))
         {
-            String localJson = DataCache.newInstance(httpService.getContext()).queryCache(getAbsoluteUrl(url));
-        if( localJson != null){
+
+            if (HttpService.httpQueue.getCache().get(getAbsoluteUrl(url)) !=null){
+                String cacheStr = new String(HttpService.httpQueue.getCache().get(getAbsoluteUrl(url)).data);
+
+                if (cacheStr != null){
+
+                    try {
+
+                        listener.onResponse(gson.fromJson(cacheStr, clazz));
+
+                    } catch (JsonSyntaxException e) {
+                        e.printStackTrace();
+                    }
+
+                    return;
+                }
 
 
-            try {
-
-               listener.onResponse(gson.fromJson(localJson, clazz));
-
-            } catch (JsonSyntaxException e) {
-                e.printStackTrace();
             }
 
+
             return;
-        }
 
         }
+
+
 
 
         httpService.addToRequestQueue(request);
@@ -109,22 +121,33 @@ public class VolleyHttpClient {
         GsonRequest request = new GsonRequest(Request.Method.GET, getAbsoluteUrl(url), clazz, header, params, listener, errorListener);
 
 
+
+
+        HttpService.httpQueue.getCache().invalidate(getAbsoluteUrl(url), true);
         if(!NetWorkUtils.detect(httpService.getContext()))
         {
-            String localJson = DataCache.newInstance(httpService.getContext()).queryCache(getAbsoluteUrl(url));
-            if( localJson != null){
 
+            if (HttpService.httpQueue.getCache().get(getAbsoluteUrl(url)) !=null){
+                String cacheStr = new String(HttpService.httpQueue.getCache().get(getAbsoluteUrl(url)).data);
 
-                try {
+                if (cacheStr != null){
 
-                    listener.onResponse(gson.fromJson(localJson, clazz));
+                    try {
 
-                } catch (JsonSyntaxException e) {
-                    e.printStackTrace();
+                        listener.onResponse(gson.fromJson(cacheStr, clazz));
+
+                    } catch (JsonSyntaxException e) {
+                        e.printStackTrace();
+                    }
+
+                    return;
                 }
 
-                return;
+
             }
+
+
+            return;
 
         }
 
@@ -155,25 +178,35 @@ public class VolleyHttpClient {
         GsonRequest request = new GsonRequest(Request.Method.GET, getAbsoluteUrl(url), clazz, header, params, listener, errorListener);
 
 
+
+
+        HttpService.httpQueue.getCache().invalidate(getAbsoluteUrl(url), true);
         if(!NetWorkUtils.detect(httpService.getContext()))
         {
-            String localJson = DataCache.newInstance(httpService.getContext()).queryCache(getAbsoluteUrl(url));
-            if( localJson != null){
 
+            if (HttpService.httpQueue.getCache().get(getAbsoluteUrl(url)) !=null){
+                String cacheStr = new String(HttpService.httpQueue.getCache().get(getAbsoluteUrl(url)).data);
 
-                try {
+                if (cacheStr != null){
 
-                    listener.onResponse(gson.fromJson(localJson, clazz));
+                    try {
 
-                } catch (JsonSyntaxException e) {
-                    e.printStackTrace();
+                        listener.onResponse(gson.fromJson(cacheStr, clazz));
+
+                    } catch (JsonSyntaxException e) {
+                        e.printStackTrace();
+                    }
+
+                    return;
                 }
 
-                return;
+
             }
 
-        }
 
+            return;
+
+        }
         httpService.addToRequestQueue(request);
     }
 
@@ -196,22 +229,33 @@ public class VolleyHttpClient {
 
         GsonRequest request = new GsonRequest(Request.Method.GET, getAbsoluteUrl(url), clazz, null, params, listener, errorListener);
 
+
+
+        HttpService.httpQueue.getCache().invalidate(getAbsoluteUrl(url), true);
         if(!NetWorkUtils.detect(httpService.getContext()))
         {
-            String localJson = DataCache.newInstance(httpService.getContext()).queryCache(getAbsoluteUrl(url));
-            if( localJson != null){
 
+            if (HttpService.httpQueue.getCache().get(getAbsoluteUrl(url)) !=null){
+                String cacheStr = new String(HttpService.httpQueue.getCache().get(getAbsoluteUrl(url)).data);
 
-                try {
+                if (cacheStr != null){
 
-                    listener.onResponse(gson.fromJson(localJson, clazz));
+                    try {
 
-                } catch (JsonSyntaxException e) {
-                    e.printStackTrace();
+                        listener.onResponse(gson.fromJson(cacheStr, clazz));
+
+                    } catch (JsonSyntaxException e) {
+                        e.printStackTrace();
+                    }
+
+                    return;
                 }
 
-                return;
+
             }
+
+
+            return;
 
         }
         httpService.addToRequestQueue(request);
@@ -228,22 +272,32 @@ public class VolleyHttpClient {
         header.put("Authorization", "Bearer"+" "+ accessToken);
         GsonRequest request = new GsonRequest(Request.Method.GET, getAbsoluteUrl(url), clazz, header , null, listener, errorListener);
 
+
+        HttpService.httpQueue.getCache().invalidate(getAbsoluteUrl(url), true);
         if(!NetWorkUtils.detect(httpService.getContext()))
         {
-            String localJson = DataCache.newInstance(httpService.getContext()).queryCache(getAbsoluteUrl(url));
-            if( localJson != null){
 
+            if (HttpService.httpQueue.getCache().get(getAbsoluteUrl(url)) !=null){
+                String cacheStr = new String(HttpService.httpQueue.getCache().get(getAbsoluteUrl(url)).data);
 
-                try {
+                if (cacheStr != null){
 
-                    listener.onResponse(gson.fromJson(localJson, clazz));
+                    try {
 
-                } catch (JsonSyntaxException e) {
-                    e.printStackTrace();
+                        listener.onResponse(gson.fromJson(cacheStr, clazz));
+
+                    } catch (JsonSyntaxException e) {
+                        e.printStackTrace();
+                    }
+
+                    return;
                 }
 
-                return;
+
             }
+
+
+            return;
 
         }
         httpService.addToRequestQueue(request);

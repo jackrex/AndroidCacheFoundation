@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="guice-3.0-no_aop">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/build/exploded-bundles/AndroidCacheFoundationFrameworkUnspecified.aar/libs/guice-3.0-no_aop.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/exploded-aar/AndroidCacheFoundation/framework/unspecified/libs/guice-3.0-no_aop.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
