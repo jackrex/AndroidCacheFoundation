@@ -24,6 +24,7 @@ OtherWise ,if you are using eclispe or other.this CacheFoundataion use these ext
 4. universal image loader (UIL) cache image
 5. umeng sdk to analy your user data
 6. roboguice to make your application more easy and clear. use @InjectView
+7. Gson googel gson to parse json more easy and quick
 
 ###More
 
