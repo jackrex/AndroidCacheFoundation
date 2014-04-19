@@ -26,6 +26,42 @@ OtherWise ,if you are using eclispe or other.this CacheFoundataion use these ext
 6. roboguice to make your application more easy and clear. use @InjectView
 7. Gson googel gson to parse json more easy and quick
 
+
+###USEAGE
+
+ - In YourApplication set globle instance
+ 
+```
+
+  @Override
+    public void onCreate() {
+        super.onCreate();
+
+        httpService = HttpService.newInstance(getApplicationContext());
+        preferenceStorageService = 				SharePreferenceStorageService.newInstance(getApplicationContext());
+        volleyHttpClient = VolleyHttpClient.newInstance(httpService);
+        context = this.getApplicationContext();
+        setupUIL();
+
+    }
+
+
+```
+
+Then Use volleyHttpClient.get(.....) or post get data from net:
+
+
+```
+
+  public  void get(String url, Class clazz, Response.Listener listener, Response.ErrorListener errorListener)
+
+
+```
+ ---
+
+
+
+
 ###More
 
 The Foundation also provide common UI like pull to refresh ,lovely toast ,base activity with swipeback and useful utility Class.
