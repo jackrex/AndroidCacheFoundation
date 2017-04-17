@@ -26,7 +26,7 @@ OtherWise ,if you are using eclispe or other.this CacheFoundataion use these ext
 6. roboguice to make your application more easy and clear. use @InjectView
 7. Gson googel gson to parse json more easy and quick
 
-###More
+### More
 
 The Foundation also provide common UI like pull to refresh ,lovely toast ,base activity with swipeback and useful utility Class.
 this help you easy and quick to build a app.
@@ -37,7 +37,7 @@ Demo provide Tab + ViewPager Style.
 
 
 
-###Pics
+### Pics
 
 Pic1
 ![Alt text](1.png "Optional title")
